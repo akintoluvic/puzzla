@@ -8,25 +8,26 @@
       main {
         display: flex;
         flex-flow: column nowrap;
-        gap: 20px;
         padding: 20px 0;
         margin: 0 auto;
         width: clamp(300px, 90%, 600px);
-        /* clamp(18.75rem, 78.261vw + 1.875rem, 46.875rem); */
       }
       .container {
         background-color: red;
         color: white;
         display: grid;
-        gap: clamp(0.625rem, 0.2455rem + 1.7857vw, 1.25rem);
+        border-radius: 1rem;
+        gap: clamp(0.625rem, 0.2455rem + 1.7857vw, 1.125rem);
         grid-template-columns: repeat(3, 1fr);
         aspect-ratio: 1 / 1;
-        padding: clamp(0.625rem, 0.2455rem + 1.7857vw, 1.25rem);
+        padding: clamp(0.925rem, 0.2455rem + 1.7857vw, 1.95rem);
       }
       .container div {
         background-color: blue;
+        border-radius: 0.625rem;
         aspect-ratio: 1 / 1;
         display: flex;
+        font-size: clamp(1.5rem, -4.3846rem + 27.6923vw, 5rem);
         justify-content: center;
         align-items: center;
       }
@@ -34,7 +35,7 @@
   </head>
   <body>
     <main>
-      <h2>Maintain Aspect Ratio 3:2</h2>
+      <h1>Puzzla</h1>
       <p>Resize the window to see the effect.</p>
 
       <div class="container">
@@ -46,25 +47,10 @@
         <div>97</div>
         <div>63</div>
         <div>82</div>
-        <div>17</div>
-        <div>63</div>
-        <div>82</div>
-        <div>17</div>
-        <div>32</div>
-        <div>34</div>
-        <div>23</div>
-        <div>15</div>
-        <div>52</div>
-        <div>97</div>
-        <div>63</div>
-        <div>82</div>
-        <div>17</div>
-        <div>63</div>
-        <div>82</div>
-        <div>17</div>
-        <div>17</div>
+        <div>74</div>
       </div>
 
     </main>
+    <script src="index.js"></script>
   </body>
 </html>
