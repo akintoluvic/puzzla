@@ -5,33 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+      main {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 20px;
+        padding: 20px 0;
+        margin: 0 auto;
+        width: clamp(300px, 90%, 600px);
+        /* clamp(18.75rem, 78.261vw + 1.875rem, 46.875rem); */
+      }
       .container {
         background-color: red;
         color: white;
         display: grid;
-        gap: 20px;
+        gap: clamp(0.625rem, 0.2455rem + 1.7857vw, 1.25rem);
         grid-template-columns: repeat(3, 1fr);
         aspect-ratio: 1 / 1;
-        padding: 20px;
+        padding: clamp(0.625rem, 0.2455rem + 1.7857vw, 1.25rem);
       }
       .container div {
-        background-color: blue;
-        aspect-ratio: 1 / 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .game {
-        background-color: red;
-        color: white;
-        display: flex;
-        flex-flow: row wrap;
-        gap: 10px;
-        aspect-ratio: 1 / 1;
-        padding: 10px;
-      }
-      .game div {
-        flex: 1 30%;
         background-color: blue;
         aspect-ratio: 1 / 1;
         display: flex;
@@ -41,32 +33,38 @@
     </style>
   </head>
   <body>
-    <h2>Maintain Aspect Ratio 3:2</h2>
-    <p>Resize the window to see the effect.</p>
+    <main>
+      <h2>Maintain Aspect Ratio 3:2</h2>
+      <p>Resize the window to see the effect.</p>
 
-    <div class="container">
-      <div>32</div>
-      <div>34</div>
-      <div>23</div>
-      <div>15</div>
-      <div>52</div>
-      <div>97</div>
-      <div>63</div>
-      <div>82</div>
-      <div>17</div>
-    </div>
+      <div class="container">
+        <div>32</div>
+        <div>34</div>
+        <div>23</div>
+        <div>15</div>
+        <div>52</div>
+        <div>97</div>
+        <div>63</div>
+        <div>82</div>
+        <div>17</div>
+        <div>63</div>
+        <div>82</div>
+        <div>17</div>
+        <div>32</div>
+        <div>34</div>
+        <div>23</div>
+        <div>15</div>
+        <div>52</div>
+        <div>97</div>
+        <div>63</div>
+        <div>82</div>
+        <div>17</div>
+        <div>63</div>
+        <div>82</div>
+        <div>17</div>
+        <div>17</div>
+      </div>
 
-    <h2>Maintain Aspect Ratio 3:2</h2>
-    <div class="game">
-      <div>32</div>
-      <div>34</div>
-      <div>23</div>
-      <div>15</div>
-      <div>52</div>
-      <div>97</div>
-      <div>63</div>
-      <div>82</div>
-      <div>17</div>
-    </div>
+    </main>
   </body>
 </html>
