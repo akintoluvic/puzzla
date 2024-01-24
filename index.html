@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      background-color: red;
+      color: white;
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      aspect-ratio: 1 / 1;
+      padding: 20px;
+    }
+    .container div { 
+    background-color: blue;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    }
+    .containers {
+      background-color: red;
+      color: white;
+      display: flex;
+      flex-flow: row wrap;
+      gap: 20px;
+      aspect-ratio: 1 / 1;
+      padding: 20px;
+    }
+    .containers div { 
+    flex: 1 30%;
+    background-color: blue;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    
+    }
+    </style>
+</head>
+<body>
+  <h2>Maintain Aspect Ratio 3:2</h2>
+<p>Resize the window to see the effect.</p>
+
+<div class="container"> 
+  <div>3:2 Aspect ratio</div>
+  <div>3:2 Aspect ratio</div>
+  <div>3:2 Aspect ratio</div>
+  <div>3:2 Aspect ratio</div>
+  <div>3:2 Aspect ratio</div>
+  <div>3:2 Aspect ratio</div>
+  <div>3:2 Aspect ratio</div>
+  <div>3:2 Aspect ratio</div>
+  <div>3:2 Aspect ratio</div>
+  
+</div>
+</body>
+</html>
