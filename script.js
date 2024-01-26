@@ -1,7 +1,7 @@
 // create varaiables for storing the game state
-let currentLevel = 2;
+let currentLevel = 1;
 let noOfColumns = 3;
-let gameType = "ABC";
+let gameType = "123";
 let timer = 0;
 let currentPieces = [];
 let initialPieceIndex = ''
