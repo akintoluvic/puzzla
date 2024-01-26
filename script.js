@@ -108,7 +108,6 @@ const addPiecesToDom = () => {
     });
     piece.innerHTML = item.piece;
     puzzle.appendChild(piece);
-    
   });
   // set puzzle grid columns
   puzzle.style.gridTemplateColumns = `repeat(${noOfColumns}, 1fr)`;
