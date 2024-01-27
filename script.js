@@ -10,7 +10,7 @@ let initialPieceIndex = ''
 const gameTypeButton = document.querySelector("#game-type");
 const levelButton = document.querySelector("#level");
 const pauseButton = document.querySelector("#pause");
-const puzzle = document.querySelector(".puzzle");
+const puzzle = document.querySelector("#puzzle");
 pauseButton.innerHTML = "⏯ ▶️";
 
 // add event listeners to the game buttons
