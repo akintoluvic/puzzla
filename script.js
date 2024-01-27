@@ -8,9 +8,9 @@ let initialPieceIndex = ''
 
 // get dom elements
 const gameTypeButton = document.querySelector("#game-type");
+const levelButton = document.querySelector("#level");
 const pauseButton = document.querySelector("#pause");
 const puzzle = document.querySelector(".puzzle");
-
 pauseButton.innerHTML = "⏯ ▶️";
 
 // add event listeners to the game buttons
@@ -88,6 +88,7 @@ const changePiecePosition = (index) => {
   // check if the pieces are sorted
   if (checkIfPiecesAreSorted(currentPieces)) {
     currentLevel = currentLevel === 3 ? 1 : currentLevel + 1;
+    levelButton.innerHTML = currentLevel;
     startAndSetPieces();
     alert("You won");
   }
