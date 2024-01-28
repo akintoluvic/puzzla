@@ -24,6 +24,7 @@
         gap: 40px;
         text-align: center;
       }
+
       header {
         display: flex;
         flex-flow: column nowrap;
@@ -34,7 +35,7 @@
           height: clamp(30px, 50%, 60px);
         }
 
-        .controls > * {
+        #controls > * {
           background-color: #f4f4f5;
           color: #09090b;
           border-radius: 5px;
@@ -114,7 +115,7 @@
           </defs>
         </svg>
 
-        <div class="controls">
+        <div id="controls">
 
             
           <button type="button">
@@ -131,13 +132,10 @@
         </div>
       </header>
 
-      <div>
-        <div id="puzzle"></div>
-        <div id="show-message">kjfjfj</div>
-      </div>
+      <div id="puzzle"></div>
       
       <div id="help">
-        Hint: Drag and drop to arrange items in ascending order.
+        <b>Hint:</b> Click an item then click on where to place it.
       </div>
     </main>
     <script src="script.js"></script>
