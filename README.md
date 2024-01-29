@@ -90,6 +90,56 @@ body {
 ### Add styling to the header section
 We will add the following styles to the header section.
 ```css
+header {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        gap: 20px;
+
+        #logo {
+          height: clamp(30px, 50%, 60px);
+        }
+
+        #logo {
+          font-size: clamp(1.5rem, 1.5rem + 1.7857vw, 2.5rem);
+          font-weight: 700;
+          color: #09090b;
+          display: flex;
+          align-items: center;
+        }
+
+        #controls {
+          display: flex;
+          gap: 15px;
+        }
+
+        #controls > * {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          height: 35px;
+          background-color: #f4f4f5;
+          color: #09090b;
+          border-radius: 5px;
+          border: none;
+          padding: 0 8px;
+          font-size: 1.25rem;
+
+          &:is(#game-type) {
+            width: 55px;
+          }
+
+          &:is(#timer) {
+            width: 60px;
+          }
+
+          &:is(button):hover {
+            background-color: #09090b;
+            color: #f4f4f5;
+          }
+        }
+      }
+```
 
 
 - Create the puzzle pieces
