@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Puzzla | javascript alpha/numeric puzzle</title>
     <!-- favicon -->
-    <link id="favicon" rel="icon" href="/favicon.png" type="image/png">
+    <link id="favicon" rel="icon" href="/favicon.png" type="image/png" />
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -67,7 +67,7 @@
           &:is(#timer) {
             width: 60px;
           }
-          
+
           &:is(button):hover {
             background-color: #09090b;
             color: #f4f4f5;
@@ -104,30 +104,50 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-      <header>
-        <div id="logo">
-          <svg width="46" height="54" viewBox="0 0 46 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M3.5 37.996V15.504L23 4.05837L42.5 15.504V37.996L23 49.4416L3.5 37.996Z" stroke="#09090B" stroke-width="7"/>
-          <path d="M15.5 31.996V22.754L23.5 18.0584L31.5 22.754V31.996L23.5 36.6916L15.5 31.996Z" stroke="#09090B" stroke-width="7"/>
-          </svg> 
-          &nbsp;Puzzla
-        </div>
-          
-        <div id="controls">
-          <button type="button">⛰</button>
-          <button id="game-type" onsc="show()" onclick="changeGameType()" type="button">123</button>
-          <button id="pause" type="button">▶ </button>
-          <span id="timer">00:00</span>
-          <span>Lvl:&nbsp; <span id="level">1</span></span>
-        </div>
-      </header>
+    <header>
+      <div id="logo">
+        <svg
+          width="46"
+          height="54"
+          viewBox="0 0 46 54"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M3.5 37.996V15.504L23 4.05837L42.5 15.504V37.996L23 49.4416L3.5 37.996Z"
+            stroke="#09090B"
+            stroke-width="7"
+          />
+          <path
+            d="M15.5 31.996V22.754L23.5 18.0584L31.5 22.754V31.996L23.5 36.6916L15.5 31.996Z"
+            stroke="#09090B"
+            stroke-width="7"
+          />
+        </svg>
+        &nbsp;Puzzla
+      </div>
 
-      <main id="puzzle"></main>
-      
-      <footer id="help">
-        <b>Hint:</b> Click an item then click on where to place it.
-      </footer>
+      <div id="controls">
+        <button type="button">⛰</button>
+        <button
+          id="game-type"
+          onsc="show()"
+          onclick="changeGameType()"
+          type="button"
+        >
+          123
+        </button>
+        <button id="pause" type="button">▶</button>
+        <span id="timer">00:00</span>
+        <span>Lvl:&nbsp; <span id="level">1</span></span>
+      </div>
+    </header>
+
+    <main id="puzzle"></main>
+
+    <footer id="help">
+      <b>Hint:</b> Click an item then click on where to place it.
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
-<!DOCTYPE html>
