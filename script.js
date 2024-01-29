@@ -11,10 +11,7 @@ const gameTypeButton = document.querySelector("#game-type");
 const levelButton = document.querySelector("#level");
 const pauseButton = document.querySelector("#pause");
 const puzzle = document.querySelector("#puzzle");
-pauseButton.innerHTML = "⏯ ▶️";
-
-// add event listeners to the game buttons
-gameTypeButton.addEventListener("click", () => changeGameType())
+// pauseButton.innerHTML = "⏯ ▶️ ▶ ⏯  ⏸";
 
 // array of tailwind css color names
 const colors = [
@@ -124,9 +121,8 @@ const generateRandomPieces = (length) => {
         ? String.fromCharCode(Math.ceil(Math.random() * 25) + 65)
         : Math.ceil(Math.random() * 99);
     const randomColor = colors[createdArray.length];
+    
     // check if the random item is already in the array
-
-    // console.log(createdArray.filter(item => item.piece === randomItem)
     if (!(createdArray.filter(item => item.piece === randomItem).length > 0)) {
       createdArray.push({ piece: randomItem, randomColor });
     }
@@ -143,10 +139,9 @@ const checkIfPiecesAreSorted = (array) => {
   let sortedArray
 
   if (gameType === "123") {
-    // sort by name
+    // sort alphabetically
     sortedArray = [...array].sort((a, b) => {
-      // const nameA = a.piece.toUpperCase(); // ignore upper and lowercase
-      // const nameB = b.piece.toUpperCase(); // ignore upper and lowercase
+      // would have needed converting to uppercase but the alphabets are already uppercase
       if (a.piece < b.piece) {
         return -1;
       }
@@ -154,7 +149,7 @@ const checkIfPiecesAreSorted = (array) => {
         return 1;
       }
 
-      // names must be equal
+      // names are already equal
       return 0;
     });
   } else {
@@ -172,7 +167,6 @@ const checkIfPiecesAreSorted = (array) => {
 function startAndSetPieces() {
   noOfColumns = calculateColumnNumbers();
   generateRandomPieces(noOfColumns**2);
-  console.log('started', currentPieces)
 };
 
 startAndSetPieces();
