@@ -71,6 +71,27 @@ All this sections will be created in the `index.html` file using the code below.
 </html>
 ```
 
+## Add styling to the puzzle UI
+If you preview the page in the browser, you will notice that the page is not styled. We will add styling to the page in the `style.css` file. We will start by adding styling to the header section.
+### Add styling to the html body
+We will style the html body to get the desired layout with the following code.
+```css
+body {
+        display: flex;
+        flex-flow: column nowrap;
+        padding: 20px 0;
+        margin: 0 auto;
+        width: clamp(300px, 80%, 550px);
+        font-family: "Montserrat", sans-serif;
+        gap: 40px;
+        text-align: center;
+      }
+```
+### Add styling to the header section
+We will add the following styles to the header section.
+```css
+
+
 - Create the puzzle pieces
 - Add styling to the puzzle pieces
 - Add styling to the puzzle board
