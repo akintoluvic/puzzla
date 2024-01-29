@@ -48,10 +48,12 @@
           font-size: 1.25rem;
 
           &:is(#game-type) {
-            width: 57px;
+            width: 55px;
           }
 
-          &:is(#timer) { width: 60px;}
+          &:is(#timer) {
+            width: 60px;
+          }
           
           &:is(button):hover {
             background-color: #09090b;
@@ -121,13 +123,11 @@
         </svg>
 
         <div id="controls">
-
-            
           <button type="button">⛰</button>
           <button id="game-type" onsc="show()" onclick="changeGameType()" type="button">123</button>
-          <button id="pause" type="button">▶ ⏸ </button>
-          <span id="timer">02:03</span>
-          <span> 🏅 <span id="level">1</span></span>
+          <button id="pause" type="button">▶ </button>
+          <span id="timer">00:00</span>
+          <span>Lvl:&nbsp; <span id="level">1</span></span>
         </div>
       </header>
 
@@ -140,37 +140,3 @@
   </body>
 </html>
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Puzzla | javascript alpha/numeric puzzle</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <img src="" alt="">
-    <div id="controls">
-      <button type="button"> 🏔 1</button>
-      <button type="button">⏭</button>
-      <button id="game-type" type="button">123</button>
-      <button id="pause" type="button">1 ▶ ⏯  ⏸</button>
-      <span id="timer">02:03</span>
-      <span>⛰ <span id="level">1</span></span>
-    </div>
-  </header>
-  <main id="puzzle">
-    <div class="piece">34</div>
-    <div class="piece">54</div>
-    <div class="piece">13</div>
-    <div class="piece">23</div>
-    <div class="piece">62</div>
-    <div class="piece">56</div>
-    <div class="piece">85</div>
-    <div class="piece">92</div>
-    <div class="piece">21</div>
-  </main>
-  <footer><b>Hint:</b> Click an item then click on where to place it.</footer>
-  <script src="script.js"></script>
-</body>
-</html>
