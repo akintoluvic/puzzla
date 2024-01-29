@@ -141,6 +141,38 @@ header {
       }
 ```
 
+### Add styling to the puzzle board
+We will add the following styles to the puzzle board.
+```css
+#puzzle {
+        color: white;
+        display: grid;
+        border: 2px solid #f4f4f5;
+        border-radius: 1rem;
+        gap: clamp(0.625rem, 0.2455rem + 1.7857vw, 1.125rem);
+        grid-template-columns: repeat(3, 1fr);
+        aspect-ratio: 1 / 1;
+        padding: clamp(0.925rem, 0.2455rem + 1.7857vw, 1.95rem);
+
+        .piece {
+          border-radius: 0.625rem;
+          aspect-ratio: 1 / 1;
+          display: flex;
+          font-size: clamp(1.5rem, -6.3846rem + 27.6923vw, 4.5rem);
+          font-weight: 700;
+          justify-content: center;
+          align-items: center;
+          color: #09090b;
+          background-color: #f4f4f5;
+
+          &:hover {
+            cursor: pointer;
+            border: 1px solid #09090b;
+          }
+        }
+      }
+```
+
 
 - Create the puzzle pieces
 - Add styling to the puzzle pieces
