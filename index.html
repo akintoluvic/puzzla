@@ -14,7 +14,7 @@
       rel="stylesheet"
     />
     <style>
-      main {
+      body {
         display: flex;
         flex-flow: column nowrap;
         padding: 20px 0;
@@ -36,18 +36,24 @@
         }
 
         #controls > * {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          height: 35px;
           background-color: #f4f4f5;
           color: #09090b;
           border-radius: 5px;
           border: none;
-          padding: 4px 8px;
+          padding: 0 8px;
           font-size: 1.25rem;
+
+          &:is(#game-type) {
+            width: 57px;
+          }
+
+          &:is(#timer) { width: 60px;}
           
-          /* &:first-of-type {
-            padding: 0;
-            display: inline-block;
-          } */
-          &:is(#pause, #game-type):hover {
+          &:is(button):hover {
             background-color: #09090b;
             color: #f4f4f5;
           }
@@ -83,7 +89,6 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main>
       <header>
         <svg
           width="175"
@@ -118,26 +123,54 @@
         <div id="controls">
 
             
-          <button type="button">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="32" height="32" rx="4" fill="#F4F4F5"/>
-<path d="M22.375 6C21.34 6 20.5 6.84 20.5 7.875V23.625C20.5 24.66 21.34 25.5 22.375 25.5H23.125C24.16 25.5 25 24.66 25 23.625V7.875C25 6.839 24.16 6 23.125 6H22.375ZM13.75 12.375C13.75 11.339 14.59 10.5 15.625 10.5H16.375C17.411 10.5 18.25 11.34 18.25 12.375V23.625C18.25 24.66 17.41 25.5 16.375 25.5H15.625C15.1277 25.5 14.6508 25.3025 14.2992 24.9508C13.9475 24.5992 13.75 24.1223 13.75 23.625V12.375ZM7 16.875C7 15.839 7.84 15 8.875 15H9.625C10.661 15 11.5 15.84 11.5 16.875V23.625C11.5 24.66 10.66 25.5 9.625 25.5H8.875C8.37772 25.5 7.90081 25.3025 7.54917 24.9508C7.19754 24.5992 7 24.1223 7 23.625V16.875Z" fill="#09090B"/>
-</svg>
-
-          </button>
-          <button id="game-type" type="button">123</button>
-          <button id="pause" type="button">⏯</button>
+          <button type="button">⛰</button>
+          <button id="game-type" onsc="show()" onclick="changeGameType()" type="button">123</button>
+          <button id="pause" type="button">▶ ⏸ </button>
           <span id="timer">02:03</span>
-          <span>Level: <span id="level">1</span></span>
+          <span> 🏅 <span id="level">1</span></span>
         </div>
       </header>
 
-      <div id="puzzle"></div>
+      <main id="puzzle"></main>
       
-      <div id="help">
+      <footer id="help">
         <b>Hint:</b> Click an item then click on where to place it.
-      </div>
-    </main>
+      </footer>
     <script src="script.js"></script>
   </body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puzzla | javascript alpha/numeric puzzle</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="" alt="">
+    <div id="controls">
+      <button type="button"> 🏔 1</button>
+      <button type="button">⏭</button>
+      <button id="game-type" type="button">123</button>
+      <button id="pause" type="button">1 ▶ ⏯  ⏸</button>
+      <span id="timer">02:03</span>
+      <span>⛰ <span id="level">1</span></span>
+    </div>
+  </header>
+  <main id="puzzle">
+    <div class="piece">34</div>
+    <div class="piece">54</div>
+    <div class="piece">13</div>
+    <div class="piece">23</div>
+    <div class="piece">62</div>
+    <div class="piece">56</div>
+    <div class="piece">85</div>
+    <div class="piece">92</div>
+    <div class="piece">21</div>
+  </main>
+  <footer><b>Hint:</b> Click an item then click on where to place it.</footer>
+  <script src="script.js"></script>
+</body>
 </html>
