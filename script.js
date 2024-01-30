@@ -2,7 +2,7 @@
 let currentLevel = 1;
 let noOfColumns = 3;
 let gameType = "123";
-let timer = 0;
+let timer;
 let currentPieces = [];
 let initialPieceIndex = ''
 
@@ -45,21 +45,6 @@ const colors = [
 
 // no of pieces for the puzzle grid
 const calculateColumnNumbers = () => currentLevel == 1 ? 3 : currentLevel == 2 ? 4 : 5;
-
-// create a function for generating an array of unique random colors of provided length
-const generateRandomColors = (length) => {
-  const createdArray = [];
-
-  while (createdArray.length < length) {
-    const randomColor = colors[Math.floor(Math.random() * colors.length)];
-
-    if (!createdArray.includes(randomColor)) {
-      createdArray.push(randomColor);
-    }
-  }
-
-  return createdArray;
-};
 
 // change the game type
 const changeGameType = () => {
